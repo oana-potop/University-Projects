@@ -1,0 +1,1 @@
+void all_tests();
