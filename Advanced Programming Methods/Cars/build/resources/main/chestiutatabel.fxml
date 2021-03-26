@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SupremeController">
+  <children>
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TabPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Cars">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="CarTable" prefHeight="719.0" prefWidth="1000.0">
+                                <columns>
+                                  <TableColumn fx:id="ccolid" prefWidth="108.00003242492676" text="ID" />
+                                    <TableColumn fx:id="ccolman" prefWidth="188.7999725341797" text="Manufacturer" />
+                                    <TableColumn fx:id="ccolmod" prefWidth="200.800048828125" text="Model" />
+                                    <TableColumn fx:id="ccolmaxspd" prefWidth="231.99993896484375" text="Maximum Speed" />
+                                    <TableColumn fx:id="ccolye" prefWidth="143.20001220703125" text="Year" />
+                                    <TableColumn fx:id="ccolpr" minWidth="7.20001220703125" prefWidth="129.5999755859375" text="Price" />
+                                </columns>
+                              </TableView>
+                              <TextField fx:id="id" layoutX="1061.0" layoutY="82.0" promptText="ID" />
+                              <TextField fx:id="manufacturer" layoutX="1061.0" layoutY="153.0" promptText="Manufacturer" />
+                              <TextField fx:id="model" layoutX="1061.0" layoutY="219.0" promptText="Model" />
+                              <TextField fx:id="maxspeed" layoutX="1061.0" layoutY="293.0" promptText="Maximum Speed" />
+                              <TextField fx:id="year" layoutX="1061.0" layoutY="360.0" promptText="Year" />
+                              <TextField fx:id="price" layoutX="1061.0" layoutY="427.0" promptText="Price" />
+                              <Button fx:id="addButton" layoutX="1073.0" layoutY="474.0" mnemonicParsing="false" onAction="#addCarHandler" prefHeight="53.0" prefWidth="127.0" text="Add">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="removeButton" layoutX="1073.0" layoutY="544.0" mnemonicParsing="false" onAction="#removeCarHandler" prefHeight="53.0" prefWidth="127.0" text="Remove">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="updateButton" layoutX="1073.0" layoutY="614.0" mnemonicParsing="false" onAction="#updateCarHandler" prefHeight="53.0" prefWidth="127.0" text="Update">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Reservations">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="ReservationTable" prefHeight="719.0" prefWidth="1079.0">
+                                 <columns>
+                                    <TableColumn fx:id="rcolid" prefWidth="45.59997636079788" text="ID" />
+                                    <TableColumn fx:id="rcolcarid" prefWidth="63.19997787475586" text="Car ID" />
+                                    <TableColumn fx:id="rcolcarman" prefWidth="122.39999389648438" text="Car Manufacturer" />
+                                    <TableColumn fx:id="rcolcarmod" prefWidth="87.19996643066406" text="Car Model" />
+                                    <TableColumn fx:id="rcolcarmaxspd" prefWidth="132.79998779296875" text="Car Maximum Speed" />
+                                    <TableColumn fx:id="rcolcarye" minWidth="7.20001220703125" prefWidth="75.20001220703125" text="Car Year" />
+                                    <TableColumn fx:id="rcolcarpr" minWidth="7.20001220703125" prefWidth="67.20001220703125" text="Car Price" />
+                                    <TableColumn fx:id="rcolnameowner" minWidth="7.20001220703125" prefWidth="124.79998779296875" text="Owner Name" />
+                                    <TableColumn fx:id="rcolphnr" minWidth="7.20001220703125" prefWidth="136.800048828125" text="Phone Number" />
+                                    <TableColumn fx:id="rcolinitDate" minWidth="7.20001220703125" prefWidth="110.4000244140625" text="Rental Date" />
+                                    <TableColumn fx:id="rcolfinDate" minWidth="7.20001220703125" prefWidth="119.20001220703125" text="Final Date" />
+                                 </columns>
+                              </TableView>
+                              <TextField fx:id="rid" layoutX="1107.0" layoutY="41.0" promptText="ID" />
+                              <TextField fx:id="rcarid" layoutX="1107.0" layoutY="111.0" promptText="Car ID" />
+                              <Button fx:id="addRButton" layoutX="1117.0" layoutY="453.0" mnemonicParsing="false" onAction="#addReservationHandler" prefHeight="43.0" prefWidth="127.0" text="Add">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="nameOwner" layoutX="1107.0" layoutY="181.0" promptText="Owner Name" />
+                              <TextField fx:id="phoneNumber" layoutX="1107.0" layoutY="321.0" promptText="Phone Number" />
+                              <TextField fx:id="initDate" layoutX="1107.0" layoutY="251.0" promptText="Rental Date" />
+                              <TextField fx:id="finDate" layoutX="1107.0" layoutY="391.0" promptText="Final Date" />
+                              <Button fx:id="removeRButton" layoutX="1117.0" layoutY="527.0" mnemonicParsing="false" onAction="#removeReservationHandler" prefHeight="43.0" prefWidth="127.0" text="Remove">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="updateRButton" layoutX="1117.0" layoutY="603.0" mnemonicParsing="false" onAction="#updateReservationHandler" prefHeight="43.0" prefWidth="127.0" text="Update">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Reports">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextArea fx:id="ReportsText" layoutX="14.0" layoutY="14.0" prefHeight="661.0" prefWidth="813.0" />
+                              <Label layoutX="865.0" layoutY="57.0" prefHeight="37.0" prefWidth="285.0" text="Get the list of clients who rented a ceratin car.">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="repcarid" layoutX="865.0" layoutY="102.0" prefHeight="38.0" prefWidth="368.0" promptText="Car ID">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="rep1button" layoutX="1142.0" layoutY="160.0" mnemonicParsing="false" onAction="#getOwnersbyCar" prefHeight="40.0" prefWidth="90.0" text="Press me">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="865.0" layoutY="276.0" prefHeight="38.0" prefWidth="329.0" text="Get the list of clients who rented on a certain date.">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="repindate" layoutX="865.0" layoutY="321.0" prefHeight="38.0" prefWidth="368.0" promptText="Rental Date">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="rep2button" layoutX="1142.0" layoutY="379.0" mnemonicParsing="false" onAction="#getOwnersbyInitDate" prefHeight="40.0" prefWidth="90.0" text="Press me">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="864.0" layoutY="474.0" prefHeight="46.0" prefWidth="370.0" text="Get the numbers of  the clients who should return the cars on">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="repfindate" layoutX="865.0" layoutY="549.0" prefHeight="38.0" prefWidth="368.0" promptText="Final Date">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="rep3button" layoutX="1142.0" layoutY="607.0" mnemonicParsing="false" onAction="#getNumbersbyFinDate" prefHeight="40.0" prefWidth="90.0" text="Press me">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="864.0" layoutY="501.0" prefHeight="38.0" prefWidth="370.0" text="a certain date">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  
+              </tabs>
+            </TabPane>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

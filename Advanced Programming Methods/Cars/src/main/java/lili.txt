@@ -1,0 +1,9 @@
+1;scdd;sdvdvdf;763;19999;400.0
+2;dvdf;gdfgdf;543;4324;234.0
+3;grd;gdfgd;432;423;432.0
+4;gvdf;gdfg;34;23;236.0
+5;jhg;kjkjghkjh;768;65576;9898.0
+6;jhgjh;kjkjgh;768;65576;9898.0
+7;ssdf;sdds;34543;435;534.0
+8;sdf;sdfs;34345;3243;23343.0
+9;sdfwef;sdfssf;34345;3243;23343.0
